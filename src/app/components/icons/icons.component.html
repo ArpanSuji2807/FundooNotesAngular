@@ -15,10 +15,13 @@
             <img id="image1" src="../../../assets/color.png">
          </mat-icon>
       </button>
-      <mat-menu  #color="matMenu">
-         <div class="color1" fxLayout="row" fxLayoutAlign="center center"  *ngFor="let colors of colorsList">
-            <button (click)="changeColor(colors)" [ngStyle]= "{ 'background-color': colors }" mat-mini-fab></button>
+      <mat-menu  #color="matMenu"  >
+         <div fxLayoutGap="6px" fxLayout ="row" *ngFor="let colors of colorsList">
+            <div  *ngFor="let color of colors" class="color1" fxLayout="row" fxLayoutAlign="center center"  >
+               <button  (click)="changeColor(color)" [ngStyle]= "{ 'background-color': color }" mat-mini-fab></button>
+            </div>
          </div>
+         
       </mat-menu>
       <button class="button" matTooltip="Add Image">
          <mat-icon>

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { AuthguardServiceService } from './Services/Authguard/authguard-service.service'; 
 import {MatMenuModule} from '@angular/material/menu';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatTooltipModule} from '@angular/material/tooltip';
@@ -66,7 +67,9 @@ import { UpdatenoteComponent } from './components/updatenote/updatenote.componen
     MatDialogModule,
     MatMenuModule
   ],
-  providers: [],
+  providers: [
+    AuthguardServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

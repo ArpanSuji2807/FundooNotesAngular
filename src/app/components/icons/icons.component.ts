@@ -9,7 +9,10 @@ import { NoteserviceService } from 'src/app/Services/NoteService/noteservice.ser
 export class IconsComponent implements OnInit {
   @Input() noteCard:any
 
-  colorsList = ['white', '#e2725b', '#ffae42', '#fefe33', '#77dd77', '#40e0d0', '#a4dded', '#77b5fe', '#ba55d3', '#ffb3de', '#c19a6b', '#d3d3d3']
+  colorsList = [
+    ['white', '#e2725b', '#ffae42','#fefe33', '#77dd77', '#40e0d0'],
+    ['#a4dded', '#77b5fe', '#ba55d3', '#ffb3de', '#c19a6b', '#d3d3d3']
+  ]
 
   constructor(private noteservice:NoteserviceService) { }
 

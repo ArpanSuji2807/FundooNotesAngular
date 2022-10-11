@@ -9,9 +9,11 @@ import { NoteserviceService } from 'src/app/Services/NoteService/noteservice.ser
 })
 export class UpdatenoteComponent implements OnInit {
 
+  notesArray:any
   title:any
   description:any
   id: any;
+  notesList:any
   constructor(
     private noteservice:NoteserviceService,
     public dialogRef: MatDialogRef<UpdatenoteComponent>,
@@ -38,7 +40,23 @@ export class UpdatenoteComponent implements OnInit {
     }
     this.noteservice.updateNotes(note).subscribe((res:any) =>{
       console.log(res)
+      this.getAllNotes()
     },error =>{
+      console.log(error)
+    })
+  }
+
+  getAllNotes(){
+    this.noteservice.getAllNotes().subscribe((res:any) =>{
+      console.log(res)
+      this.notesArray = res.data;
+      this.notesArray.reverse();
+      this.notesList = this.notesArray.filter((note:any) =>{
+        return note.isDeleted == false && note.isArchived == false;
+      })
+      console.log("notes-->>",this.notesList);
+      
+    },(error:any) =>{
       console.log(error)
     })
   }
