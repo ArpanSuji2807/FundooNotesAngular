@@ -9,6 +9,8 @@ import { NoteserviceService } from 'src/app/Services/NoteService/noteservice.ser
 export class IconsComponent implements OnInit {
   @Input() noteCard:any
 
+  colorsList = ['white', '#e2725b', '#ffae42', '#fefe33', '#77dd77', '#40e0d0', '#a4dded', '#77b5fe', '#ba55d3', '#ffb3de', '#c19a6b', '#d3d3d3']
+
   constructor(private noteservice:NoteserviceService) { }
 
   ngOnInit(): void {
@@ -31,4 +33,17 @@ export class IconsComponent implements OnInit {
     })
   }
 
+  changeColor(Color:any){
+    console.log(Color)
+    let data = {
+      'Color':Color,
+      _id:this.noteCard
+    }
+    this.noteservice.updateNotes(data).subscribe((res:any) =>{
+      console.log(res);
+    },error =>{
+      console.log(error);
+      
+    })
+  }
 }

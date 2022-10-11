@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { GetAllNotesComponent } from '../get-all-notes/get-all-notes.component';
 import { UpdatenoteComponent } from '../updatenote/updatenote.component';
 
 
