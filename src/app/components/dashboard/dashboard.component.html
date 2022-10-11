@@ -1,0 +1,56 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+    <mat-toolbar class="example-toolbar">
+        <button mat-icon-button (click)="snav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <img src="../../../assets/keep_2020q4_48dp.png" />
+        <h1 class="example-app-name">Fundoo</h1>
+        <div class="Search">
+            <button mat-icon-button class="search-button">
+                <mat-icon id="search" matTooltip="Search">search</mat-icon>
+            </button>
+            <input class="search1" fxFlex="50" matInput placeholder="Search">
+        </div>
+        <div  class="refreshListSettings">
+            <img id="icon" src="../../../assets/refresh.png"/>
+            <img id="icon" src="../../../assets/list.png  "/>
+            <img id="icon" src="../../../assets/settings.png" />
+        </div>
+        <div  class="accountsSection">
+            <img id="icon1" src="../../../assets/googleApps.png"/>
+            <img id="icon1" src="../../../assets/account.png"/>
+        </div>
+    </mat-toolbar>
+
+    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+        <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+            fixedTopGap="56">
+           <mat-list class="side-items-list">
+            <div class="sidebar-item" fxLayoutGap="30px">
+                <img id="side-icons" src="../../../assets/notes.png">
+                <span id="side-names">Notes</span>
+            </div>
+            <div class="sidebar-item" fxLayoutGap="30px">
+                <img id="side-icons" src="../../../assets/reminder.png">
+                <span id="side-names">Reminder</span>
+            </div>
+            <div class="sidebar-item" fxLayoutGap="30px">
+                <img id="side-icons" src="../../../assets/edit.png">
+                <span id="side-names">Edit Labels</span>
+            </div>
+            <div class="sidebar-item" fxLayoutGap="30px">
+                <img id="side-icons" src="../../../assets/archive.png">
+                <span id="side-names">Archive</span>
+            </div>
+            <div class="sidebar-item" fxLayoutGap="30px">
+                <img id="side-icons" src="../../../assets/trash.png">
+                <span id="side-names">Trash</span>
+            </div>
+           </mat-list>
+        </mat-sidenav>
+
+        <mat-sidenav-content class="notesArea">
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

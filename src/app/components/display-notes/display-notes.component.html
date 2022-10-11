@@ -1,0 +1,13 @@
+<br>
+<div *ngFor="let note of NotesList" class="displayNotes">
+    <mat-card [ngStyle]="{ 'background-color': note.Color }" class="cardDisplay">
+        <div  class="title">
+            <div (click)="openDialog(note)" class="title1">{{note.Title}}</div>
+            <img matTooltip="pin note" id="img1" src="../../../assets/pin.png">
+        </div>
+        <div (click)="openDialog(note)"  class="description">{{note.Description}}</div>
+        <div class="Icons">
+            <app-icons [noteCard]="note._id"></app-icons>
+        </div>
+    </mat-card>
+</div>

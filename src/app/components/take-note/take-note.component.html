@@ -1,0 +1,39 @@
+<br>
+<div *ngIf="open == true" (click)="display()" class="main">
+    <mat-card class="main1">
+        <div fxLayout="row" >
+            <div fxFlex="95" class="takeNote">
+                Take a note...
+            </div>
+            <div fxLayout="row" fxLayoutAlign="end center" class="IconsNote1">
+                <img id="img1" src="../../../assets/newnote.png">
+                <img id="img1" src="../../../assets/draw.png">
+                <img id="img1" src="../../../assets/image.png">
+            </div>
+        </div>       
+    </mat-card>
+</div>
+
+<form *ngIf="open == false" (ngSubmit)="display()" class="takeNoteMain" [formGroup]="createNoteForm" (ngSubmit)="createNote()">
+   <mat-card fxLayout = "column" class="titleDescription">
+    <div class="takeNoteInput">
+        <div class="InputField">
+            <input class="input1" formControlName="Title" placeholder="Title">
+        </div>
+        <div  class="pin">
+            <img id="pin1" matTooltip="pin note" src= "../../../assets/pin.png">
+        </div>
+    </div>
+    <div class="DescriptionInput">
+        <input class="input1" formControlName="Description" placeholder="Take a note...">
+    </div>
+    <div class="iconsInput">
+        <div class="iconsInput1">
+           <app-icons></app-icons>
+        </div>
+        <div class="button">
+            <button mat-button>Close</button>
+        </div>
+    </div>
+   </mat-card>
+</form>

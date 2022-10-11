@@ -1,0 +1,17 @@
+<div class="UpdateNotesMain">
+    <div class="title">
+        <input class="title1" type="text" [(ngModel)]="title">
+        <img matTooltip="pin note" id="img" src="../../../assets/pin.png">
+    </div>
+    <div class="description">
+        <input class="description1" type="text" [(ngModel)]="description">
+    </div>
+    <div class="IconsButtons">
+        <div class="Icons">
+            <app-icons></app-icons>
+        </div>
+        <div class="button">
+            <button id="button1" (click)=" onNoClick()" (click)="updateNotes()">Close</button>
+        </div>
+    </div>
+</div>

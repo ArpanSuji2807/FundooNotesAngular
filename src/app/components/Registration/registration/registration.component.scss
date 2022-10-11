@@ -1,0 +1,113 @@
+.MainBox{
+    height: 99.7vh;
+    width: 99.8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.MainBox1{
+    height: 85%;
+    width: 55%;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.459);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.MainBox2{
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+}
+.mainContent{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.Title{
+    font-size: xx-large;
+    font-weight:500;
+}
+.Create{
+    width: 80%;
+    height: 7%;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+}
+.continue{
+    font-size: large;
+    margin-top: -4%;
+}
+.passwordInput,
+.nameInputs{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-between;
+}
+.passwordInput{
+    margin-top: -4%;
+}
+#password,
+#confirm,
+#lastname,
+#firstname{
+    font-size: smaller;
+
+}
+.email{
+    width: 90%;
+    margin-top: -5%;
+}
+#email1{
+    width: 100%;
+    font-size: smaller;
+}
+.lastrow{
+    width: 100%;
+    height: 7%;
+}
+.lastrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+.button{
+    margin-right: 10%;
+}
+.googleImage{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.googleImage1{
+    height: 50%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.image{
+    height: 100%;
+    width: 100%;
+}
+.googleImage3{
+    font-size: larger;
+    font-weight: 100;
+    margin-left: 4%;
+}
+.imageline{
+    font-size: larger;
+    font-weight: 100;
+    margin-left: 4%;
+    display: flex;
+    justify-content: center;
+}

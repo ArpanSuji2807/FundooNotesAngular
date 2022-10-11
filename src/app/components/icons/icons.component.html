@@ -1,0 +1,35 @@
+<div class="IconsMain">
+   <div class="imageIcons">
+      <button class="button" matTooltip="remind me">
+         <mat-icon>
+            <img id="image1" src="../../../assets/reminder.png">
+         </mat-icon>
+      </button>
+      <button class="button" matTooltip="Collaborator">
+         <mat-icon>
+            <img id="image1" src="../../../assets/collaborator.png">
+         </mat-icon>
+      </button>
+      <button class="button" matTooltip="Background">
+         <mat-icon>
+            <img id="image1" src="../../../assets/color.png">
+         </mat-icon>
+      </button>
+      <button class="button" matTooltip="Add Image">
+         <mat-icon>
+            <img id="image1" src="../../../assets/image.png">
+         </mat-icon>
+      </button>
+      <button (click)="archiveNotes()" class="button" matTooltip="Archive">
+         <mat-icon>
+            <img id="image1" src="../../../assets/archive.png">
+         </mat-icon>
+      </button>
+      <mat-icon [matMenuTriggerFor]="menu">
+         <img matTooltip="More" id="image1" src="../../../assets/more.png">
+      </mat-icon>
+      <mat-menu #menu="matMenu">
+         <button (click)="trashNotes()" mat-menu-item>Delete note</button>
+      </mat-menu>
+   </div>
+</div>

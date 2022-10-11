@@ -1,0 +1,40 @@
+.UpdateNotesMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.title{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+}
+#img{
+    height: 22px;
+    margin-left: 50%;
+}
+.description{
+    width: 100%;
+    margin-top: 3%;
+}
+.IconsButtons{
+    display: flex;
+    flex-direction: row;
+    margin-top: 4%;
+}
+.description1,
+.title1{
+    border: none;
+    outline: none;
+}
+.button{
+    margin-top: 1%;
+    margin-left: 25%;
+}
+#button1{
+    border: none;
+    outline: none;
+    background-color: white;
+    font-weight: 700;
+    font-size: medium;
+    cursor: pointer;
+}

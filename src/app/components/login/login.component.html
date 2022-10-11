@@ -1,0 +1,43 @@
+<div class="LoginMain">
+    <form class="LoginMain1" [formGroup]="registerForm" (ngSubmit)="login()">
+
+        <div class="LoginMainContent">
+            <div class="IconName">
+                <span style="color: blue;">F</span>
+                <span style="color: red;">u</span>
+                <span style="color: yellow;">n</span>
+                <span style="color: blue;">d</span>
+                <span style="color: green;">o</span>
+                <span style="color: red;">o</span>
+            </div>
+            <div class="Login">Sign In</div>
+            <div class="Login1">to continue to gmail</div>
+            <div class="EmailInput">
+                <mat-form-field appearance="outline" id="email">
+                    <mat-label>Email or Phone</mat-label>
+                    <input matInput placeholder="email" formControlName="email">
+                    <mat-error>Enter your email</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="forgetEmail">
+                <button class="forgetEmail1" mat-button color="primary">Forgot Email?</button>
+            </div>
+            <div class="PasswordInput">
+                <mat-form-field appearance="outline" id="password">
+                    <mat-label>Password</mat-label>
+                    <input type="password" matInput placeholder="email" formControlName="password">
+                    <mat-error>Enter your Password</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="forgetPassword">
+                <button routerLink="/forgetpass" class="forgetEmail1" mat-button color="primary">Forgot Password?</button>
+            </div>
+            <div class="notComputer">Not your computer? Use Guest mode to sign in privately.</div>
+            <div class="Learn">Learn more</div>
+            <div class="LoginlastRow">
+                <button routerLink="/regis" class="createAccount" mat-button color="primary">Create Account</button>
+                <button class="Loginbutton" routerLink="/login" mat-raised-button color="primary">Next</button>
+            </div>
+        </div>
+    </form>
+</div>
