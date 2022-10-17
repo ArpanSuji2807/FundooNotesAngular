@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, EventEmitter, Inject, OnInit, Output } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { NoteserviceService } from 'src/app/Services/NoteService/noteservice.service';
 
@@ -14,6 +14,8 @@ export class UpdatenoteComponent implements OnInit {
   description:any
   id: any;
   notesList:any
+  @Output() NotesUpdate = new EventEmitter<any>()
+
   constructor(
     private noteservice:NoteserviceService,
     public dialogRef: MatDialogRef<UpdatenoteComponent>,
@@ -40,23 +42,8 @@ export class UpdatenoteComponent implements OnInit {
     }
     this.noteservice.updateNotes(note).subscribe((res:any) =>{
       console.log(res)
-      this.getAllNotes()
+      this.NotesUpdate.emit(res)
     },error =>{
-      console.log(error)
-    })
-  }
-
-  getAllNotes(){
-    this.noteservice.getAllNotes().subscribe((res:any) =>{
-      console.log(res)
-      this.notesArray = res.data;
-      this.notesArray.reverse();
-      this.notesList = this.notesArray.filter((note:any) =>{
-        return note.isDeleted == false && note.isArchived == false;
-      })
-      console.log("notes-->>",this.notesList);
-      
-    },(error:any) =>{
       console.log(error)
     })
   }

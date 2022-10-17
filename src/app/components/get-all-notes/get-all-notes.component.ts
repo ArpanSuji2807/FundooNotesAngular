@@ -21,13 +21,28 @@ notesList:any
       console.log(res)
       this.notesArray = res.data;
       this.notesArray.reverse();
-      this.notesList = this.notesArray.filter((note:any) =>{
+      this.notesArray = this.notesArray.filter((note:any) =>{
         return note.isDeleted == false && note.isArchived == false;
       })
-      console.log("notes-->>",this.notesList);
+      console.log("notes-->>",this.notesArray);
       
     },(error:any) =>{
       console.log(error)
     })
+  }
+
+  getNotes(event:any){
+    console.log(event);
+    this.getAllNotes()
+  }
+
+  updatedNotes(event:any){
+    console.log(event);
+    this.getAllNotes() 
+  }
+
+  newNotes(event:any){
+    console.log(event)
+    this.getAllNotes()
   }
 }

@@ -1,5 +1,5 @@
-<app-take-note></app-take-note>
+<app-take-note (changeNotesStatus)="getNotes($event)"></app-take-note>
 <br>
 <div class="display">
-    <app-display-notes class="notesDisplay" [NotesList] = "notesArray"></app-display-notes>
+    <app-display-notes (NotesUpdate)="newNotes($event)" class="notesDisplay"  (refreshNotes)="updatedNotes($event)" [NotesList] = "notesArray"></app-display-notes>
 </div>

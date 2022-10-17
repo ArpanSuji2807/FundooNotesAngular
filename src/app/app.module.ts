@@ -44,7 +44,7 @@ import { UpdatenoteComponent } from './components/updatenote/updatenote.componen
     GetAllNotesComponent,
     DisplayNotesComponent,
     IconsComponent,
-    UpdatenoteComponent
+    UpdatenoteComponent,
   ],
   imports: [
     BrowserModule,
